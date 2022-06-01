@@ -45,12 +45,14 @@ section .sky .cloud1 {
 	position: absolute;
 	top: -30px;
 	left: 10%;
+	animation: walking linear 10s infinite;
 }
 
 section .sky .cloud2 {
 	position: absolute;
 	top: 20px;
 	left: 0%;
+	animation: walking linear 22s infinite;
 }
 
 section .town .circle {
@@ -59,6 +61,7 @@ section .town .circle {
 	left: 50%;
 	margin-left: -165px;
 	opacity: 0.7;
+	animation: rotation linear 20s infinite;
 }
 
 section .town .town_night {
@@ -72,6 +75,29 @@ section .town .town_day {
 	bottom: 0px;
 	left: 40px;
 	animation: day linear 20s infinite;
+}
+
+section .street {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	animation: day linear 20s infinite;
+}
+
+section .street .person {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	animation: walking linear 7s infinite;
+}
+
+section .street .family {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	animation: walking linear 20s infinite;
 }
 
 @keyframes rotation {
@@ -147,6 +173,30 @@ section .town .town_day {
 		opacity: 0;
 	}
 	100% {
+		opacity: 0;
+	}
+}
+
+@keyframes walking {
+	0% {
+		opacity: 0;
+		left: 0;
+	}
+
+	5% {
+		opacity: 1;
+	}
+
+	90% {
+		opacity: 1;
+	}
+
+	95% {
+		opacity: 0;
+	}
+
+	100% {
+		left: 90%;
 		opacity: 0;
 	}
 }
